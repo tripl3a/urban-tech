@@ -1,0 +1,27 @@
+TODO:
+1. Date => Integer, der von 0 hochzählt
+2. monate dummy encoden
+3. WE binär encoden
+
+
+Warnings
+- atemp is highly correlated with temp (ρ = 0.9917) Rejected
+- cnt is highly correlated with registered (ρ = 0.94552) Rejected
+
+
+instant                int64
+dteday        datetime64[ns]
+season                 int64
+yr                     int64
+mnth                   int64
+holiday                int64	<- bool
+weekday                int64
+workingday             int64	<- bool
+weathersit             int64
+temp                 float64
+atemp                float64
+hum                  float64
+windspeed            float64
+casual                 int64
+registered             int64
+cnt                    int64
