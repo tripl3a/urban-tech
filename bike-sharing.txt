@@ -1,7 +1,13 @@
+Gaussian processes scikit
+im Prinzip Kernel Ridge Regression => confidence intervals
+
 TODO:
-1. Date => Integer, der von 0 hochzählt
-2. monate dummy encoden
-3. WE binär encoden
+1. map coeffs weights to names
+2. compare coeffs to feature importance 
+3. hyperparameter optimization
+4. log results of iterations
+5. write down findings
+6. finish presi
 
 
 Warnings
@@ -9,15 +15,15 @@ Warnings
 - cnt is highly correlated with registered (ρ = 0.94552) Rejected
 
 
-instant                int64
+instant                int64	<- record index (incremented each day)
 dteday        datetime64[ns]
 season                 int64
-yr                     int64
-mnth                   int64
+yr                     int64	<- 0,1
+mnth                   int64	<- to be one-hot-encoded
 holiday                int64	<- bool
 weekday                int64
 workingday             int64	<- bool
-weathersit             int64
+weathersit             int64	<- to be one-hot-encoded
 temp                 float64
 atemp                float64
 hum                  float64
@@ -25,3 +31,4 @@ windspeed            float64
 casual                 int64
 registered             int64
 cnt                    int64
+weekend		           int64	<- bool, manually added
